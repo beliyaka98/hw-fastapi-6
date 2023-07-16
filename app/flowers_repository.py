@@ -15,6 +15,8 @@ class FlowersRepository:
     def __init__(self):
         self.flowers = []
 
-    # необходимые методы сюда
-
-    # конец решения
+    def add_flower(self, name, count, cost):
+        flower = Flower(name, count, cost, self.get_next_id())
+        self.flowers.append(flower)
+    def get_next_id(self):
+        return len(self.flowers)
