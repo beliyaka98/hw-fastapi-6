@@ -20,4 +20,4 @@ def test_post_signup_valid():
         "http://localhost:8000/signup", data=data, allow_redirects=False
     )
     assert response.status_code == 303
-    assert "/signup" in response.headers.get("location")
+    assert "/login" in response.headers.get("location")

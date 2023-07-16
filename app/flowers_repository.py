@@ -19,4 +19,4 @@ class FlowersRepository:
         flower = Flower(name, count, cost, self.get_next_id())
         self.flowers.append(flower)
     def get_next_id(self):
-        return len(self.flowers)
+        return len(self.flowers) + 1
